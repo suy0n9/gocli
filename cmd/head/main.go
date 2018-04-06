@@ -23,12 +23,12 @@ func run() error {
 
 	file := args[0]
 	if verbose {
-		fmt.Printf("==> %s <===\n", file)
+		fmt.Printf("==> %s <==\n", file)
 	}
 	fp, err := os.Open(file)
 
 	if err != nil {
-		return fmt.Errorf("not read file %s", file)
+		return fmt.Errorf("not read file: %s", file)
 	}
 	defer fp.Close()
 
